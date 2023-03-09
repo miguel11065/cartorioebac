@@ -104,6 +104,19 @@ int deletar()
 		printf("O usuário não se enconta no sistema!\n");
 		system("pause");
 	}
+	else
+	{
+		fclose(file);
+		remove(cpf);
+		FILE *file;	
+		file = fopen(cpf,"r");
+		if(file == NULL)
+		{
+			printf("Usuário deletado com sucesso!.\n");
+			system("pause");
+		}
+	}
+	fclose(file);
 }
 
 
@@ -136,7 +149,7 @@ int main()
 			printf("\t4 - Sair do sistema\n\n");
 			printf("Opção: "); //fim do menu
 		
-			scanf("%d", &opcao); //armazenando escokha do usuario
+			scanf("%d", &opcao); //armazenando escolha do usuario
 	
 			system("cls"); // responsavel por limpar a tela
 	
