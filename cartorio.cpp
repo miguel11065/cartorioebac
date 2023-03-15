@@ -84,6 +84,7 @@ int consulta()
 		printf("\n\n");
 	}
 	
+	fclose(file);
 	system("pause");
 }
 
